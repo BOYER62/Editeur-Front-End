@@ -1,0 +1,23 @@
+.ClassHtml, .ClassCss, .ClassJs
+{
+    background-color: black;
+    color: white;
+    height: 300px;
+    overflow-y: scroll;
+    resize: none;
+}
+
+.ClassResult
+{
+    background-color: white;
+    color: black;
+    height: 300px;
+}
+
+
+
+.ClassHtml:focus
+{
+    background: #111;
+    color: #fff;
+}
