@@ -1,3 +1,6 @@
+body{
+    background-color: aqua;
+}
 .ClassHtml, .ClassCss, .ClassJs
 {
     background-color: black;
@@ -20,4 +23,25 @@
 {
     background: #111;
     color: #fff;
+}
+
+.classCaractereMax
+{
+    width: 100px;
+    height: 20px;
+    background-color: blanchedalmond;
+    color: black;
+    text-align: center;
+}
+
+.classValeurMax
+{
+    background-color: black;
+    width: 50px;
+    height: 25px;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    bottom: 3%;
+    transform: translate(-50%);
 }
