@@ -12,7 +12,7 @@ let valBalise = '';
 valCarractereMax.innerHTML = nombreCarractere + '/' + carractereMax;
 
 valHtml.addEventListener('keyup', function(){
-    if(nombreCarractere <= carractereMax){
+    if(nombreCarractere < carractereMax){
     valResult.innerHTML = valHtml.value;
     valBalise = valResult.textContent;
     nombreCarractere = valBalise.length;
@@ -24,9 +24,12 @@ valCss.addEventListener('keyup', function(){
 });
 
 valJs.addEventListener('keyup', function(){
-    valTextJs.innerHTML = '<script>' + valJs.value +'</script>';
+    valTextJs.innerHTML = '<script defer>' + valJs.value +'</script>';
 });
 
 valValeurMax.addEventListener('mousemove', function(e){
     valValeurMax.style.left = e.x / window.innerWidth * 100 + '%';
+    carractereMax = e.x / window.innerWidth * 500;
+    carractereMax = Math.trunc(carractereMax);
+    valCarractereMax.innerHTML = nombreCarractere + '/' + carractereMax;
 });

@@ -1,6 +1,12 @@
 body{
     background-color: aqua;
 }
+
+.container
+{
+    margin-top: 20px;
+}
+
 .ClassHtml, .ClassCss, .ClassJs
 {
     background-color: black;
@@ -17,12 +23,19 @@ body{
     height: 300px;
 }
 
-
-
-.ClassHtml:focus
+.classProgresseBar
 {
-    background: #111;
-    color: #fff;
+    width: 80%;
+    height: 25px;
+    border: 2px, solid, gainsboro;
+}
+
+.classBoutonProgresseBar
+{
+    border-radius: 30px;
+    width: 10%;
+    height: 20px;
+    background-color: blue;
 }
 
 .classCaractereMax
