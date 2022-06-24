@@ -20,7 +20,6 @@ valHtml.addEventListener('keyup', function(){
     valBalise = valResult.textContent;
     nombreCarractere = valBalise.length;
     const valWidth = (nombreCarractere / carractereMax) * 100 ;
-    console.log(valWidth);
     if(valWidth > 50 && valWidth < 80){
         valBoutonProgresseBar.style.backgroundColor = 'orange';
     }
