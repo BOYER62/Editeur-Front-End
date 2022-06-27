@@ -6,8 +6,15 @@ body{
 {
     margin-top: 20px;
 }
-
-.ClassHtml, .ClassCss, .ClassJs
+.ClassHtml
+{
+    background-color: black;
+    color: white;
+    height: 270px;
+    overflow-y: scroll;
+    resize: none;
+}
+.ClassCss, .ClassJs
 {
     background-color: black;
     color: white;

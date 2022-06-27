@@ -1,3 +1,6 @@
+const valBold = document.getElementById('inputBold');
+const valItalic = document.getElementById('inputItalic');
+const valUnderline = document.getElementById('inputUnderline');
 const valHtml = document.getElementById('idHtml');
 const valCss = document.getElementById('idCss') ;
 const valJs = document.getElementById('idJs');
@@ -14,9 +17,24 @@ let carractereMax = 250;
 let valBalise = '';
 
 valCarractereMax.innerHTML = nombreCarractere + '/' + carractereMax;
+valResult.addEventListener('click',function(){
+    logo('Default');
+})
+
+valHtml.addEventListener('click',function(){
+    logo('logoHtml');
+})
+
+valCss.addEventListener('click',function(){
+    logo('logoCss');
+})
+
+valJs.addEventListener('click',function(){
+    logo('logoJs');
+})
 
 valHtml.addEventListener('keyup', function(){
-    logo('logoHtml');
+    // logo('logoHtml');
     if(nombreCarractere < carractereMax){
     valResult.innerHTML = valHtml.value;
     valBalise = valResult.textContent;
@@ -35,16 +53,17 @@ valHtml.addEventListener('keyup', function(){
     valCarractereMax.innerHTML = nombreCarractere + '/' + carractereMax;
 }});
 valCss.addEventListener('keyup', function(){
-    logo('logoCss');
+    // logo('logoCss');
     valTextCss.innerHTML = '<style>' + valCss.value +'</style>';
 });
 
 valJs.addEventListener('keyup', function(){
-    logo('logoJs');
+    // logo('logoJs');
     valTextJs.innerHTML = '<script defer>' + valJs.value +'</script>';
 });
 
 valValeurMax.addEventListener('mousemove', function(e){
+    logo('Default');
     valValeurMax.style.left = e.x / window.innerWidth * 100 + '%';
     carractereMax = e.x / window.innerWidth * 500;
     carractereMax = Math.trunc(carractereMax);
@@ -79,3 +98,18 @@ function logo(image){
             break;
     }
 }
+
+valBold.addEventListener('click',function(){
+    valHtml.innerHTML = valHtml.innerHTML + "<strong></strong>";
+    console.log(valBold);
+});
+
+valItalic.addEventListener('click',function(){
+    valHtml.innerHTML = valHtml.innerHTML + "<em></em>";
+    console.log(valItalic);
+});
+
+valUnderline.addEventListener('click',function(){
+    valHtml.innerHTML = valHtml.innerHTML + "<u></u>"
+    console.log(valUnderline);
+});
